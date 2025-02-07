@@ -1,0 +1,9 @@
+services:
+  groxy:
+    build: .
+    tty: true
+    # volumes:
+    #   - .:/go:cached
+    command: sleep infinity
+    extra_hosts:
+      - host.docker.internal:host-gateway

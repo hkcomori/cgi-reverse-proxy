@@ -1,0 +1,28 @@
+{
+	"name": "groxy",
+	"dockerComposeFile": "compose.yaml",
+	"service": "groxy",
+	"remoteUser": "devuser",
+	"updateRemoteUserUID": true,
+	"workspaceFolder": "/go/app",
+	"mounts": [
+		"type=bind,source=${localWorkspaceFolder},target=/go/app,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"onsi.vscode-ginkgo",
+				"mhutchie.git-graph"
+			],
+			"settings": {
+				"go.gopath": "/go",
+				"go.inferGopath": true,
+				"go.useLanguageServer": true
+			}
+		},
+		"codespaces": {
+			"openFiles": ["CONTRIBUTING.md"]
+		}
+	}
+}
